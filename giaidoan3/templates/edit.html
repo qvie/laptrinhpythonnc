@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh Sửa Thông Tin Sinh Viên</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Chỉnh Sửa Thông Tin Sinh Viên</h2>
+        <form method="POST" action="/edit/{{ student.student_id }}">
+            <div class="form-group">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" value="{{ student.name }}" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Tuổi:</label>
+                <input type="number" id="age" name="age" value="{{ student.age }}" required>
+            </div>
+            <div class="form-group">
+                <label for="major">Chuyên ngành:</label>
+                <input type="text" id="major" name="major" value="{{ student.major }}" required>
+            </div>
+            <button type="submit" class="btn">Lưu Thay Đổi</button>
+        </form>
+        <a href="/dashboard" class="link">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>

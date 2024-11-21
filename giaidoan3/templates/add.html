@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sinh Viên</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm Sinh Viên</h2>
+        <form method="POST" action="/add">
+            <div class="form-group">
+                <label for="student_id">Mã sinh viên:</label>
+                <input type="text" id="student_id" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Tuổi:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="major">Chuyên ngành:</label>
+                <input type="text" id="major" name="major" required>
+            </div>
+            <button type="submit" class="btn">Thêm Sinh Viên</button>
+        </form>
+        <a href="/dashboard" class="link">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>
